@@ -1,13 +1,64 @@
-# GitHub Codespaces ♥️ Next.js
+# README.md
 
-Welcome to your shiny new Codespace running Next.js! We've got everything fired up and running for you to explore Next.js.
+# My Next.js App
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+このプロジェクトは、Next.jsをバックエンドに使用し、TypeScriptとReactを用いたユーザー登録、編集、削除機能を持つWebアプリケーションです。
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+## 概要
 
-To run this application:
+このアプリケーションは、ユーザーの登録、情報の編集、削除を行うためのインターフェースを提供します。ユーザーは名前、メールアドレス、セール番号を入力して新しいアカウントを作成し、登録されたユーザーの一覧を表示することができます。
 
-```
-npm run dev
-```
+## セットアップ手順
+
+1. リポジトリをクローンします。
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. プロジェクトディレクトリに移動します。
+
+   ```bash
+   cd my-nextjs-app
+   ```
+
+3. 依存関係をインストールします。
+
+   ```bash
+   npm install
+   ```
+
+4. 開発サーバーを起動します。
+
+   ```bash
+   npm run dev
+   ```
+
+5. ブラウザで `http://localhost:3000` にアクセスします。
+
+## 使用方法
+
+- **ユーザー登録**: `/users/create` ページに移動し、フォームに必要な情報を入力して登録ボタンを押します。
+- **ユーザー一覧**: ホームページに移動すると、登録されたユーザーの一覧が表示されます。
+- **ユーザー編集**: `/users/edit` ページに移動し、特定のユーザー情報を編集できます。
+- **ユーザー削除**: ユーザー一覧から削除ボタンを押すことで、特定のユーザーを削除できます。
+
+## ファイル構成
+
+- `src/components/UserForm.tsx`: ユーザー登録フォームコンポーネント
+- `src/components/UserList.tsx`: 登録されたユーザー情報の一覧を表示するコンポーネント
+- `src/pages/api/users/[id].ts`: 特定のユーザー情報を取得、編集、削除するAPIエンドポイント
+- `src/pages/api/users/index.ts`: ユーザーの登録や一覧取得を行うAPIエンドポイント
+- `src/pages/_app.tsx`: アプリケーション全体の設定
+- `src/pages/_document.tsx`: HTMLドキュメントのカスタマイズ
+- `src/pages/index.tsx`: アプリケーションのホームページ
+- `src/pages/users/create.tsx`: ユーザー登録ページ
+- `src/pages/users/edit.tsx`: ユーザー情報編集ページ
+- `src/pages/users/[id].tsx`: 特定のユーザー情報を表示するページ
+- `src/styles/globals.css`: グローバルスタイル
+- `src/styles/Home.module.css`: ホームページ専用スタイル
+- `src/types/index.ts`: TypeScriptの型定義
+
+## ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。
